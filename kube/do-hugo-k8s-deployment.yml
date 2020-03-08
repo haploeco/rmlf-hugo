@@ -22,4 +22,4 @@ spec:
             - containerPort: 80
               name: http
         imagePullSecrets:
-        - name: regcred
+          - name: regcred
