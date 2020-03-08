@@ -12,8 +12,8 @@ export COMMIT_SHA1=$COMMIT_SHA1
 # and overwrite the original with that one
 echo "Updating deployment with $COMMIT_SHA1"
 
-envsubst <./kube/do-sample-deployment.yml >./kube/do-sample-deployment.yml.out
-mv ./kube/do-sample-deployment.yml.out ./kube/do-sample-deployment.yml
+envsubst <./kube/do-hugo-k8s-deployment.yml >./kube/do-hugo-k8s-deployment.yml.out
+mv ./kube/do-hugo-k8s-deployment.yml.out ./kube/do-hugo-k8s-deployment.yml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > cert.crt
 
