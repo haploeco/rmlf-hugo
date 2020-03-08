@@ -6,7 +6,7 @@ metadata:
   labels:
     app: do-rmlf-hugo-app
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: http
