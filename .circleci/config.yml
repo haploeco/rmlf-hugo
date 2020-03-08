@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/buildpack-deps:stretch
     environment:
-      IMAGE_NAME: nthompson66/do-rmlf-hugo-app
+      IMAGE_NAME: prodcloud/do-rmlf-hugo-app
     working_directory: ~/app
     steps:
       - checkout

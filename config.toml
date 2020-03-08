@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "http://rockymountainlinuxfest.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "RMLF coming in August 2021!"
 
 # Add theme
 theme = "paper"
