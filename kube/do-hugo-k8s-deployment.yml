@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: do-rmlf-hugo-app
+  namespace: default
+  labels:
+    app: do-rmlf-hugo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: do-rmlf-hugo-app
+  template:
+    metadata:
+      labels:
+        app: do-rmlf-hugo-app
+    spec:
+      containers:
+        - name: do-rmlf-hugo-app
+          image: nthompson66/do-rmlf-hugo-app:$COMMIT_SHA1
+          ports:
+            - containerPort: 80
+              name: http

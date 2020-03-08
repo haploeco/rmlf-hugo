@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: do-rmlf-hugo-app
+  namespace: default
+  labels:
+    app: do-rmlf-hugo-app
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      name: http
+  selector:
+    app: do-rmlf-hugo-app
