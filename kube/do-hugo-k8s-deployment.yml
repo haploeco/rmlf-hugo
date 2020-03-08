@@ -15,11 +15,11 @@ spec:
       labels:
         app: do-rmlf-hugo-app
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: do-rmlf-hugo-app
           image: nthompson66/do-rmlf-hugo-app:$COMMIT_SHA1
           ports:
             - containerPort: 80
               name: http
-        imagePullSecrets:
-          - name: regcred
